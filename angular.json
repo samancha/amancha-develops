@@ -29,16 +29,11 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              // "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
-            "stylePreprocessorOptions": {
-              "sass": {
-                "silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -95,12 +90,10 @@
               }
             ],
             "styles": [
-              // "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"            ]
           }
         }
       }
