@@ -1,6 +1,7 @@
 /* Default height for small devices */
 #intro-example {
     height: 400px;
+    color: aqua;
 }
 
 /* Height for devices larger than 992px */
@@ -10,6 +11,6 @@
     }
 }
 
-.red {
-    background-color: red;
+.myred {
+    background-color: lightcoral;
 }
