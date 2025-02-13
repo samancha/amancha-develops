@@ -3,7 +3,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 
-
 @Component({
   selector: 'app-calendar',
   imports: [FullCalendarModule],
@@ -17,5 +16,6 @@ export class CalendarComponent {
   };
   constructor(){
     
+
   }
 }

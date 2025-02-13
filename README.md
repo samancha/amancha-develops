@@ -2,9 +2,22 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
 
-## Development server
+## Tools needed
 
-To start a local development server, run:
+* npm (11.1.0) (verify install with npm --version)
+* node (v23.7.0) (verify install with node --version)
+
+### Installing Project Dependencies
+
+run command below ()in the root of this project) to install needed packages. You can view those packages in package.json. 
+
+```
+npm install
+```
+
+Development server
+
+To start a local development server to host the webapp run:
 
 ```bash
 ng serve

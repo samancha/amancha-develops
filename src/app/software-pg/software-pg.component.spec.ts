@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SoftwarePgComponent } from './software-pg.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 describe('SoftwarePgComponent', () => {
   let component: SoftwarePgComponent;
@@ -8,7 +8,7 @@ describe('SoftwarePgComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SoftwarePgComponent]
+      imports: [SoftwarePgComponent, FullCalendarModule]
     })
     .compileComponents();
 
