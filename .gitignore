@@ -5,6 +5,11 @@
 .env.local
 .env.*.local
 
+# Angular environment files with real credentials
+src/environments/environment.ts
+src/environments/environment.prod.ts
+!src/environments/environment.example.ts
+
 # Compiled output
 /dist
 /tmp

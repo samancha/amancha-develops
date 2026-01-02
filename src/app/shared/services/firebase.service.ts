@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { ContactFormData } from '../models/contact.model';
-
-// Firebase configuration - these will be provided at runtime
-declare const firebase: any;
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc, query, orderBy, getDocs, Timestamp } from 'firebase/firestore';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,36 +18,40 @@ export class FirebaseService {
 
   /**
    * Initialize Firebase if not already done
-   * You'll add your Firebase config here after creating a project
+   * Uses npm-installed Firebase module with Angular environment file
    */
-  private async initializeFirebase(): Promise<void> {
+  private initializeFirebase(): void {
     try {
-      // Check if Firebase is already available from CDN
-      if (typeof (window as any).firebase === 'undefined') {
-        console.warn('Firebase not loaded from CDN. Using fallback.');
-        return;
-      }
+      console.log('🔍 Firebase: Loading config from environment...');
+      
+      const firebaseConfig = environment.firebase;
 
-      // Initialize Firebase with config from environment variables
-      // For development: Add to .env file (see .env.example)
-      // For production: Add to Netlify environment variables
-      const firebaseConfig = {
-        apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-        projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-        authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-        databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-        storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-        messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-        appId: import.meta.env.VITE_FIREBASE_APP_ID
-      };
+      console.log('🔧 Firebase Config loaded:', {
+        projectId: firebaseConfig.projectId,
+        authDomain: firebaseConfig.authDomain,
+        hasApiKey: !!firebaseConfig.apiKey
+      });
 
       if (!this.isInitialized && firebaseConfig.apiKey) {
-        const app = (window as any).firebase.initializeApp(firebaseConfig);
-        this.db = (window as any).firebase.firestore();
+        console.log('📱 Firebase: Initializing app...');
+        const app = initializeApp(firebaseConfig);
+        console.log('✅ Firebase App initialized');
+        
+        console.log('🗄️ Firebase: Getting Firestore instance...');
+        this.db = getFirestore(app);
+        console.log('✅ Firestore initialized successfully');
+        
         this.isInitialized = true;
+        console.log('✅ Firebase service ready');
+      } else {
+        console.warn('⚠️ Firebase: Already initialized or missing API key');
       }
     } catch (error) {
-      console.error('Firebase initialization error (will use Netlify Forms only):', error);
+      console.error('❌ Firebase initialization error:', error);
+      console.error('Error details:', {
+        message: (error as any).message,
+        code: (error as any).code
+      });
     }
   }
 
@@ -61,17 +65,17 @@ export class FirebaseService {
     }
 
     try {
-      const docRef = await this.db.collection('contact-submissions').add({
+      const docRef = await addDoc(collection(this.db, 'contact-submissions'), {
         name: data.name,
         email: data.email,
         service: data.service,
         message: data.message,
-        submittedAt: (window as any).firebase.firestore.Timestamp.now(),
+        submittedAt: Timestamp.now(),
         userAgent: navigator.userAgent,
         timestamp: new Date().toISOString()
       });
 
-      console.log('Submission saved to Firebase with ID:', docRef.id);
+      console.log('✓ Submission saved to Firebase with ID:', docRef.id);
       return docRef.id;
     } catch (error) {
       console.error('Error submitting to Firebase:', error);
@@ -88,7 +92,8 @@ export class FirebaseService {
     }
 
     try {
-      const snapshot = await this.db.collection('contact-submissions').orderBy('submittedAt', 'desc').get();
+      const q = query(collection(this.db, 'contact-submissions'), orderBy('submittedAt', 'desc'));
+      const snapshot = await getDocs(q);
       return snapshot.docs.map((doc: any) => ({
         id: doc.id,
         ...doc.data()

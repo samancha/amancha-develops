@@ -1,5 +1,38 @@
 # Deployment Guide - Amancha Consulting Website
 
+## Development vs Production Builds
+
+### Local Development (ng serve)
+```bash
+npm start
+```
+- **Uses:** Tailwind CDN from index.html (instant styling)
+- **URL:** http://localhost:4200
+- **Best for:** Rapid development and testing
+
+### Production Build (Netlify)
+```bash
+npm run build:consulting
+```
+- **Uses:** PostCSS compiled Tailwind (optimized, bundled)
+- **Output:** `dist/amancha_develops/`
+- **CDN:** Ignored in production build
+- **Best for:** Secure, optimized deployment
+
+---
+
+## Why This Dual Approach?
+
+| Aspect | Development (CDN) | Production (PostCSS) |
+|--------|------------------|---------------------|
+| Load Time | Instant (no build) | ~30s build |
+| CSS Size | ~100KB | ~15-30KB (purged) |
+| CSP Issues | None | ✅ Safe, no inline eval |
+| Performance | Fast reload | Optimized files |
+| Security | Dev-only | ✅ Production-grade |
+
+---
+
 ## Architecture Overview
 
 ```

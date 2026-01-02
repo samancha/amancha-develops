@@ -98,6 +98,9 @@ export class ContactComponent implements OnInit {
    */
   private submitViaNetlify(data: ContactFormData): void {
     try {
+      // Show success message first (before page reload from Netlify)
+      this.handleSuccess();
+
       // Find the actual form element in the DOM
       const form = document.querySelector('form[data-netlify="true"]') as HTMLFormElement;
       
@@ -108,15 +111,16 @@ export class ContactComponent implements OnInit {
         (form.querySelector('select[name="service"]') as HTMLSelectElement).value = data.service;
         (form.querySelector('textarea[name="message"]') as HTMLTextAreaElement).value = data.message;
         
-        form.submit();
+        // Small delay to let user see success message before page reloads
+        setTimeout(() => {
+          form.submit();
+        }, 1500);
       } else {
-        // Fallback: treat as successful even without form
-        console.warn('Form element not found, but treating as submitted');
-        this.handleSuccess();
+        console.warn('Form element not found');
       }
     } catch (error) {
       console.error('Netlify submission error:', error);
-      this.handleSuccess(); // Still show success - Firebase already saved it
+      this.handleSuccess();
     }
   }
 
