@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amancha Consulting | Cloud Transformation, AI Integration & Technical Mentorship</title>
+    <meta name="description" content="Expert consulting for AI integration, cloud migration, and developer acceleration. 10+ years Fortune 100 experience helping teams build smarter and scale confidently.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-900">
+    
+    <!-- NAVIGATION BAR -->
+    <!-- Copilot: Sticky header with mobile-responsive hamburger menu -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-blue-600">Amancha Consulting</span>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="#expertise" class="text-gray-700 hover:text-blue-600 transition">Expertise</a>
+                    <a href="#mentorship" class="text-gray-700 hover:text-blue-600 transition">Developer Acceleration</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+                </div>
+                <!-- Mobile menu button - Copilot: Add hamburger toggle functionality -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation - Copilot: Toggle display with mobile-menu-button -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Services</a>
+                <a href="#expertise" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Expertise</a>
+                <a href="#mentorship" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Developer Acceleration</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-50">About</a>
+                <a href="#contact" class="block px-3 py-2 text-blue-600 font-semibold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <!-- Copilot: Full-height hero with gradient background and CTA buttons -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Cloud Transformation, AI Integration & Technical Mentorship
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8">
+                        10+ years of Fortune 100 experience helping organizations modernize infrastructure, 
+                        integrate AI solutions, and accelerate developer capabilities.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition text-center">
+                            Start a Project
+                        </a>
+                        <a href="#mentorship" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50 transition text-center">
+                            Developer Programs
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Copilot: Add hero image or illustration here -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                                <span class="text-lg">$5M+ in cost savings delivered</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                                <span class="text-lg">50+ enterprise apps migrated</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                                <span class="text-lg">15+ engineers mentored</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-green-500 text-2xl"></i>
+                                <span class="text-lg">AWS & Azure certified expertise</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <!-- Copilot: Three-column grid with service cards, icons, and CTAs -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Consulting Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Enterprise-grade solutions for organizations ready to modernize their technology stack
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1: AI Integration -->
+                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border border-blue-100">
+                    <div class="bg-blue-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI Integration</h3>
+                    <ul class="text-gray-700 space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-blue-600 mt-1 mr-2"></i>
+                            <span>Document processing & data extraction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-blue-600 mt-1 mr-2"></i>
+                            <span>Generative AI content systems</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-blue-600 mt-1 mr-2"></i>
+                            <span>ML pipeline design & deployment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-blue-600 mt-1 mr-2"></i>
+                            <span>AI vendor evaluation & integration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2: Cloud Migration -->
+                <div class="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border border-indigo-100">
+                    <div class="bg-indigo-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Cloud Transformation</h3>
+                    <ul class="text-gray-700 space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-indigo-600 mt-1 mr-2"></i>
+                            <span>AWS & Azure architecture design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-indigo-600 mt-1 mr-2"></i>
+                            <span>Multi-cloud migration strategy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-indigo-600 mt-1 mr-2"></i>
+                            <span>Infrastructure as Code (IaC)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-indigo-600 mt-1 mr-2"></i>
+                            <span>Cost optimization & monitoring</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-indigo-600 font-semibold hover:text-indigo-700 flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3: Technical Assessments -->
+                <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border border-purple-100">
+                    <div class="bg-purple-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-clipboard-check text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Proof of Concepts</h3>
+                    <ul class="text-gray-700 space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-purple-600 mt-1 mr-2"></i>
+                            <span>Technical feasibility assessments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-purple-600 mt-1 mr-2"></i>
+                            <span>Rapid prototype development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-purple-600 mt-1 mr-2"></i>
+                            <span>Cloud architecture audits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-purple-600 mt-1 mr-2"></i>
+                            <span>Technology stack recommendations</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-purple-600 font-semibold hover:text-purple-700 flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVELOPER ACCELERATION SECTION -->
+    <!-- Copilot: Two-column layout with mentorship programs and pricing tiers -->
+    <section id="mentorship" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Developer Acceleration Programs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Practical, outcomes-focused training that transforms junior developers into confident contributors
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Corporate Upskilling -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Corporate Upskilling</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Custom training programs for engineering teams. Proven track record: 8 non-technical employees 
+                        successfully transitioned to engineering roles through structured mentorship.
+                    </p>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Tailored curriculum for your tech stack</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Hands-on project work with real codebases</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>AI/Cloud best practices workshops</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span>Progress tracking & ROI reporting</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition inline-block">
+                        Discuss Team Training
+                    </a>
+                </div>
+
+                <!-- 1-on-1 Mentorship -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-user-graduate text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">1-on-1 Technical Mentorship</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Personalized guidance for developers looking to level up their skills, pivot to AI/cloud, 
+                        or build portfolio-worthy projects that demonstrate real-world capabilities.
+                    </p>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-600 mt-1 mr-3"></i>
+                            <span>Code reviews & architecture feedback</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-600 mt-1 mr-3"></i>
+                            <span>Career roadmap planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-600 mt-1 mr-3"></i>
+                            <span>Pair programming on real projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-600 mt-1 mr-3"></i>
+                            <span>Interview prep & technical coaching</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition inline-block">
+                        Schedule Session
+                    </a>
+                </div>
+            </div>
+
+            <!-- Group Workshops -->
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Technical Workshops</h3>
+                </div>
+                <p class="text-gray-700 mb-6">
+                    Intensive group sessions on high-demand topics. Learn by doing with hands-on labs and 
+                    real-world scenarios drawn from 10 years of Fortune 100 experience.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h4 class="font-bold text-gray-900 mb-2">AI Integration Bootcamp</h4>
+                        <p class="text-sm text-gray-600">Build production-ready AI features from scratch</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h4 class="font-bold text-gray-900 mb-2">Cloud Architecture Patterns</h4>
+                        <p class="text-sm text-gray-600">Multi-cloud design & Infrastructure as Code</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h4 class="font-bold text-gray-900 mb-2">CI/CD Best Practices</h4>
+                        <p class="text-sm text-gray-600">Automated testing, deployment & monitoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE/TECH STACK SECTION -->
+    <!-- Copilot: Visual display of technical skills organized by category -->
+    <section id="expertise" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
+                <p class="text-xl text-gray-600">
+                    Full-stack capabilities across modern cloud and AI technologies
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cloud Platforms -->
+                <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-cloud text-blue-600 mr-3"></i>
+                        Cloud Platforms
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>AWS (Lambda, S3, CloudWatch)</li>
+                        <li>Azure (Functions, Logic Apps)</li>
+                        <li>Multi-cloud Architecture</li>
+                    </ul>
+                </div>
+
+                <!-- Languages & Frameworks -->
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-code text-purple-600 mr-3"></i>
+                        Languages
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Python</li>
+                        <li>C# / ASP.NET</li>
+                        <li>JavaScript / React / Angular</li>
+                    </ul>
+                </div>
+
+                <!-- DevOps & Infrastructure -->
+                <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-100">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-cogs text-green-600 mr-3"></i>
+                        DevOps
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Docker / Kubernetes</li>
+                        <li>GitLab CI/CD / Jenkins</li>
+                        <li>OpenTofu / IaC</li>
+                    </ul>
+                </div>
+
+                <!-- AI & Data -->
+                <div class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl border border-orange-100">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-robot text-orange-600 mr-3"></i>
+                        AI & Data
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Azure AI Services</li>
+                        <li>AWS SageMaker</li>
+                        <li>PostgreSQL / CosmosDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT/CREDENTIALS SECTION -->
+    <!-- Copilot: Two-column layout with bio and key achievements -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About Steve Amancha</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        With over 10 years at State Farm, I've led cloud-native transformations, mentored 
+                        15+ engineers, and delivered multi-million dollar AI and infrastructure solutions for 
+                        one of America's largest Fortune 100 companies.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        I hold an M.S. in Applied Artificial Intelligence from University of San Diego and 
+                        a B.S. in Electrical & Computer Engineering from University of Iowa.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        My approach bridges business strategy and technical execution—I don't just build 
+                        solutions, I ensure they drive measurable outcomes for your organization.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:steve.amancha@gmail.com" class="text-blue-600 hover:text-blue-700 text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/samancha" target="_blank" class="text-blue-600 hover:text-blue-700 text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-blue-600 hover:text-blue-700 text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Key Achievements</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-dollar-sign text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">$5M+ Cost Savings</h4>
+                                    <p class="text-gray-600">Through AI automation and cloud optimization</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-graduation-cap text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">30+ Developers Trained</h4>
+                                    <p class="text-gray-600">8 successfully transitioned to engineering roles</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-server text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">50+ Apps Migrated</h4>
+                                    <p class="text-gray-600">Enterprise-scale cloud transformations</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-clock text-orange-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">70% Faster Processing</h4>
+                                    <p class="text-gray-600">AI document intelligence implementation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <!-- Copilot: Contact form with validation, ready for backend integration (Formspree, Netlify Forms, etc.) -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Let's Build Something Great</h2>
+                <p class="text-xl text-blue-100">
+                    Whether you need consulting, training, or just want to discuss your project—let's connect.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-2xl p-8 text-gray-900">
+                <!-- Copilot: Add form action attribute for backend service (e.g., action="https://formspree.io/f/YOUR_ID") -->
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">I'm interested in *</label>
+                        <select id="service" name="service" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option value="">Select a service...</option>
+                            <option value="ai-integration">AI Integration Consulting</option>
+                            <option value="cloud-migration">Cloud Transformation</option>
+                            <option value="proof-of-concept">Proof of Concept / Assessment</option>
+                            <option value="corporate-training">Corporate Team Training</option>
+                            <option value="mentorship">1-on-1 Technical Mentorship</option>
+                            <option value="workshop">Group Workshop</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Tell me about your project *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Copilot: Add success/error message display after form submission -->
+                <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+            </div>
+
+            <div class="text-center mt-8 text-blue-100">
+                <p>Or reach out directly:</p>
+                <p class="text-xl font-semibold mt-2">
+                    <a href="mailto:steve.amancha@gmail.com" class="hover:text-white transition">steve.amancha@gmail.com</a>
+                    <span class="mx-3">|</span>
+                    <span>630-744-9852</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- Copilot: Simple footer with copyright and social links -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Amancha Consulting</h3>
+                    <p class="text-gray-400">
+                        Cloud transformation, AI integration, and technical mentorship for modern organizations.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-white transition">Consulting Services</a></li>
+                        <li><a href="#mentorship" class="hover:text-white transition">Developer Programs</a></li>
+                        <li><a href="#expertise" class="hover:text-white transition">Expertise</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="mailto:steve.amancha@gmail.com" class="hover:text-white transition text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/samancha" target="_blank" class="hover:text-white transition text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="hover:text-white transition text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">Tempe, Arizona</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Amancha Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COPILOT: Add JavaScript for mobile menu toggle and form handling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // COPILOT: Form submission handler - integrate with your backend service
+        // Example backends: Formspree, Netlify Forms, EmailJS, or custom API
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // COPILOT TODO: Replace with your actual form handling endpoint
+            // Option 1: Formspree - action="https://formspree.io/f/YOUR_ID"
+            // Option 2: Netlify Forms - add data-netlify="true" to form tag
+            // Option 3: Custom API endpoint
+            
+            const formData = new FormData(contactForm);
+            
+            try {
+                // Example submission (replace URL with your endpoint)
+                // const response = await fetch('YOUR_ENDPOINT', {
+                //     method: 'POST',
+                //     body: formData
+                // });
+                
+                // For now, just show success message
+                formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                formMessage.className = 'mt-4 p-4 rounded-lg bg-green-100 text-green-800';
+                formMessage.classList.remove('hidden');
+                contactForm.reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+                
+            } catch (error) {
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                formMessage.className = 'mt-4 p-4 rounded-lg bg-red-100 text-red-800';
+                formMessage.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

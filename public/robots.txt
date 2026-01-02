@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.netlify
+Disallow: /node_modules
+
+Crawl-delay: 1
+User-agent: AhrefsBot
+Disallow: /
+
+Sitemap: https://amanchaconsulting.com/sitemap.xml

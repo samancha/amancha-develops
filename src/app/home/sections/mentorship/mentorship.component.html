@@ -1,0 +1,66 @@
+<section id="mentorship" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Developer Acceleration Programs</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Practical, outcomes-focused training that transforms junior developers into confident contributors
+      </p>
+    </div>
+
+    <!-- Main Programs Grid -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div *ngFor="let program of programs" class="bg-white p-8 rounded-xl shadow-lg">
+        <!-- Program Header -->
+        <div class="flex items-center mb-6">
+          <div [ngClass]="[getColorClasses(program.color).bg, 'w-12 h-12 rounded-lg flex items-center justify-center mr-4']">
+            <i [ngClass]="program.icon" class="text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">{{ program.title }}</h3>
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-700 mb-6">{{ program.description }}</p>
+
+        <!-- Benefits List -->
+        <ul class="space-y-3 text-gray-700 mb-6">
+          <li *ngFor="let item of program.items" class="flex items-start">
+            <i [ngClass]="[getColorClasses(program.color).text, 'fas fa-check mt-1 mr-3']"></i>
+            <span>{{ item }}</span>
+          </li>
+        </ul>
+
+        <!-- CTA Button -->
+        <a href="#contact" 
+           [ngClass]="[getColorClasses(program.color).bg, getColorClasses(program.color).hover, 'text-white px-6 py-3 rounded-lg font-semibold transition inline-block']">
+          {{ program.ctaText }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Group Workshops -->
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <!-- Workshops Header -->
+      <div class="flex items-center mb-6">
+        <div class="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+          <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900">Technical Workshops</h3>
+      </div>
+
+      <!-- Workshops Description -->
+      <p class="text-gray-700 mb-6">
+        Intensive group sessions on high-demand topics. Learn by doing with hands-on labs and 
+        real-world scenarios drawn from 10 years of Fortune 100 experience.
+      </p>
+
+      <!-- Workshops Grid -->
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div *ngFor="let workshop of workshops" class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <h4 class="font-bold text-gray-900 mb-2">{{ workshop.title }}</h4>
+          <p class="text-sm text-gray-600">{{ workshop.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,7 +5,9 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## Tools needed
 
 * npm (11.1.0) (verify install with npm --version)
+  * npm --version
 * node (v23.7.0) (verify install with node --version)
+  * node --version
 
 ### Installing Project Dependencies
 

@@ -1,0 +1,56 @@
+<nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0">
+        <span class="text-2xl font-bold text-blue-600">Amancha Consulting</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+        <a href="#expertise" class="text-gray-700 hover:text-blue-600 transition">Expertise</a>
+        <a href="#mentorship" class="text-gray-700 hover:text-blue-600 transition">Developer Acceleration</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button 
+          (click)="toggleMobileMenu()" 
+          class="text-gray-700"
+          aria-label="Toggle menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div 
+    [ngClass]="{'hidden': !mobileMenuOpen}" 
+    class="md:hidden bg-white border-t">
+    <div class="px-4 pt-2 pb-3 space-y-1">
+      <a 
+        href="#services" 
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Services</a>
+      <a 
+        href="#expertise" 
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Expertise</a>
+      <a 
+        href="#mentorship" 
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Developer Acceleration</a>
+      <a 
+        href="#about" 
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">About</a>
+      <a 
+        href="#contact" 
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-blue-600 font-semibold">Get Started</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,41 @@
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Consulting Services</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Enterprise-grade solutions for organizations ready to modernize their technology stack
+      </p>
+    </div>
+
+    <!-- Service Cards Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <div *ngFor="let service of services" 
+           [ngClass]="'bg-gradient-to-br from-' + service.color.split('-')[1] + '-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition ' + service.borderColor"
+           class="border">
+        <!-- Icon -->
+        <div [ngClass]="service.color" class="w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+          <i [ngClass]="service.icon" class="text-white text-3xl"></i>
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ service.title }}</h3>
+
+        <!-- Service Items -->
+        <ul class="text-gray-700 space-y-3 mb-6">
+          <li *ngFor="let item of service.items" class="flex items-start">
+            <i [ngClass]="'text-' + service.color.split('-')[1] + '-600'" class="fas fa-chevron-right mt-1 mr-2"></i>
+            <span>{{ item }}</span>
+          </li>
+        </ul>
+
+        <!-- CTA Link -->
+        <a href="#contact" 
+           [ngClass]="'text-' + service.color.split('-')[1] + '-600 hover:text-' + service.color.split('-')[1] + '-700'"
+           class="font-semibold flex items-center">
+          Learn more <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
