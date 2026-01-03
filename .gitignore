@@ -6,7 +6,7 @@
 .env.*.local
 
 # Angular environment files with real credentials
-src/environments/environment.ts
+# Note: environment.ts is safe to commit because it uses process.env fallbacks
 src/environments/environment.prod.ts
 !src/environments/environment.example.ts
 
