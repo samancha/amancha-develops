@@ -8,7 +8,7 @@ This guide will help you set up Firebase to store form submissions from your con
 1. Go to [firebase.google.com](https://firebase.google.com)
 2. Click "Get Started" or "Go to console"
 3. Create a new project:
-   - Project name: `amancha-consulting`
+   - Project name: 
    - Accept the terms
    - Disable Google Analytics (for now)
    - Create project
@@ -18,7 +18,7 @@ This guide will help you set up Firebase to store form submissions from your con
 1. In Firebase Console, click the gear icon (settings) → Project settings
 2. Scroll down to "Your apps" section
 3. Click "Web" icon to add a web app
-4. App nickname: `amancha-consulting`
+4. App nickname:
 5. Check "Also set up Firebase Hosting"
 6. Copy your Firebase config object
 
@@ -26,11 +26,11 @@ Your config will look like:
 ```javascript
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
-  authDomain: "amancha-consulting.firebaseapp.com",
-  projectId: "amancha-consulting-xxxxx",
-  storageBucket: "amancha-consulting.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef1234567890"
+  authDomain: "YOUR_DOMAIN.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 ```
 

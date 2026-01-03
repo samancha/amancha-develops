@@ -120,8 +120,8 @@ Firestore (read only from admin collection)
 cp .env.example .env
 
 # Fill in your Web API Key values
-VITE_FIREBASE_API_KEY=AIzaSyD...
-VITE_FIREBASE_PROJECT_ID=amancha-consulting-abc123
+VITE_FIREBASE_API_KEY
+VITE_FIREBASE_PROJECT_ID
 # ... etc (get from Firebase Console > Your apps > Web)
 ```
 
