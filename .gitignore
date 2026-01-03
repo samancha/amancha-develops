@@ -1,13 +1,14 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# Environment variables
+# Environment variables and configuration
 .env
 .env.local
 .env.*.local
 
-# Angular environment files with real credentials
-# Note: environment.ts is safe to commit because it uses process.env fallbacks
+# Angular environment files with real credentials (never commit actual values)
+src/environments/environment.ts
 src/environments/environment.prod.ts
+# Allow example files to be committed (use as template)
 !src/environments/environment.example.ts
 
 # Compiled output

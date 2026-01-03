@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build:consulting"
+  publish = "dist/amancha_develops/browser"
+
+[build.environment]
+  # These should be set in Netlify dashboard, but defined here for reference
+  # NODE_VERSION = "20"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,24 +1,18 @@
 // Firebase Configuration
-// Instructions for different environments:
+// LOCAL DEVELOPMENT: Fill these with your actual Firebase credentials from .env
+// NETLIFY PRODUCTION: These will be replaced by Netlify environment variables during build
 //
-// LOCAL DEVELOPMENT:
-// 1. Create .env file in project root with your Firebase credentials
-// 2. Credentials will be used from there
-//
-// NETLIFY PRODUCTION:
-// 1. Set Firebase environment variables in Netlify dashboard (prefix with NG_APP_)
-// 2. See NETLIFY_ENV_SETUP.md for detailed instructions
-//
-// PLACEHOLDER VALUES - Replace these with your actual Firebase config for local development
+// IMPORTANT: This file is gitignored - never commit real credentials here
+// Use environment.example.ts as a template for sharing with your team
 
 export const environment = {
   firebase: {
-    apiKey: 'PLACEHOLDER_API_KEY',
-    projectId: 'PLACEHOLDER_PROJECT_ID',
-    authDomain: 'PLACEHOLDER_AUTH_DOMAIN',
-    storageBucket: 'PLACEHOLDER_STORAGE_BUCKET',
-    messagingSenderId: 'PLACEHOLDER_SENDER_ID',
-    appId: 'PLACEHOLDER_APP_ID'
+    apiKey: 'AIzaSyDqq5IyLyg1KpSiPQp-siCI-vIMFF4ufR0',
+    projectId: 'amancha-consulting',
+    authDomain: 'amancha-consulting.firebaseapp.com',
+    storageBucket: 'amancha-consulting.firebasestorage.app',
+    messagingSenderId: '697293398344',
+    appId: '1:697293398344:web:0debc154822232cff5137d'
   }
 };
 
