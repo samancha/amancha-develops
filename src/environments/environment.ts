@@ -6,13 +6,8 @@
 // 2. Credentials will be used from there
 //
 // NETLIFY PRODUCTION:
-// 1. Set these environment variables in Netlify dashboard:
-//    NG_APP_FIREBASE_API_KEY
-//    NG_APP_FIREBASE_PROJECT_ID
-//    NG_APP_FIREBASE_AUTH_DOMAIN
-//    NG_APP_FIREBASE_STORAGE_BUCKET
-//    NG_APP_FIREBASE_MESSAGING_SENDER_ID
-//    NG_APP_FIREBASE_APP_ID
+// 1. Set Firebase environment variables in Netlify dashboard (prefix with NG_APP_)
+// 2. See NETLIFY_ENV_SETUP.md for detailed instructions
 //
 // PLACEHOLDER VALUES - Replace these with your actual Firebase config for local development
 
