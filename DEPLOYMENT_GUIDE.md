@@ -68,34 +68,7 @@ src/app/
 │       └── contact/             # Contact form with validation
 ```
 
-## Deployment Option 1: GitHub Pages (Simple)
-
-**Pros:** Free, integrated with GitHub, no backend needed
-**Cons:** Cannot handle forms directly, no serverless functions
-
-### Steps:
-1. Build the app for GitHub Pages:
-```bash
-npm run build:github-pages
-```
-
-2. Configure GitHub Pages:
-   - Go to repo Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `main` (or your branch)
-   - Folder: `docs` (or `/dist`)
-
-3. For forms, use **Formspree** or **Netlify Forms** as external service
-
-### Update app for GitHub Pages base href:
-```typescript
-// angular.json - update outputPath for GitHub Pages
-"outputPath": "docs/amancha-consulting"
-```
-
----
-
-## Deployment Option 2: Netlify (Recommended) ⭐
+## Current Deployment: Netlify
 
 **Pros:** Free tier, built-in form handling, serverless functions, CDN
 **Cons:** Learning curve for advanced features
@@ -122,7 +95,7 @@ netlify deploy --prod --dir=dist/amancha-develops
 3. Select your repository
 4. Build settings:
    - Build command: `npm run build:consulting`
-   - Publish directory: `dist/amancha-develops`
+   - Publish directory: `dist/amancha-develops/browser`
 5. Deploy
 
 ### Configure Forms:
@@ -136,40 +109,11 @@ netlify deploy --prod --dir=dist/amancha-develops
 ```toml
 [build]
   command = "npm run build:consulting"
-  publish = "dist/amancha-develops"
+  publish = "dist/amancha-develops/browser"
 
 [functions]
   directory = "netlify/functions"
 ```
-
----
-
-## Deployment Option 3: Vercel (Alternative)
-
-**Pros:** Great Next.js integration, fast deployments, generous free tier
-**Cons:** Overkill if you just need static hosting
-
-### Steps:
-1. Install Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-2. Deploy:
-```bash
-vercel --prod
-```
-
-3. Or connect GitHub:
-   - Go to vercel.com → Import Project
-   - Select GitHub repo
-   - Set build command: `npm run build:consulting`
-   - Publish directory: `dist/amancha-develops`
-
-### Serverless API (optional):
-- Create API routes in `/api/contact.ts`
-- Handle form submissions server-side
-- Send emails using SendGrid, Mailgun, etc.
 
 ---
 

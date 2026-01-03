@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build",
     "build:consulting": "ng build --configuration production",
-    "build:github-pages": "ng build --base-href=/amancha-consulting/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
