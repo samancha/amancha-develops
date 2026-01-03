@@ -7,9 +7,9 @@ import { ContactFormData } from '../models/contact.model';
   providedIn: 'root'
 })
 export class ContactService {
-  // Netlify form endpoint
+  // Netlify form endpoint - configured at build time via environment variables
   private netlifyFormId = 'YOUR_NETLIFY_FORM_ID';
-  private netlifyEndpoint = `https://amancha-consulting.netlify.app/.netlify/functions/contact`;
+  private netlifyEndpoint = `${typeof window !== 'undefined' ? window.location.origin : ''}/.netlify/forms/contact`;
 
   constructor(private http: HttpClient) {}
 
