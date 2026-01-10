@@ -22,7 +22,9 @@ export const environment = {
 };
 `;
 
-const environmentPath = path.join(__dirname, 'src/environments/environment.ts');
+// Use process.cwd() to get the project root, not __dirname (which is scripts folder)
+const projectRoot = process.cwd();
+const environmentPath = path.join(projectRoot, 'src/environments/environment.ts');
 
 try {
   fs.writeFileSync(environmentPath, environmentContent);
@@ -36,3 +38,4 @@ try {
   console.error('❌ Error generating environment.ts:', error);
   process.exit(1);
 }
+

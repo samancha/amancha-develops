@@ -1,24 +1,13 @@
-// This file is auto-generated at build time from environment variables
-// Do not edit manually - it will be overwritten
-// 
-// Environment variables needed:
-// - NG_APP_FIREBASE_API_KEY
-// - NG_APP_FIREBASE_PROJECT_ID
-// - NG_APP_FIREBASE_AUTH_DOMAIN
-// - NG_APP_FIREBASE_STORAGE_BUCKET
-// - NG_APP_FIREBASE_MESSAGING_SENDER_ID
-// - NG_APP_FIREBASE_APP_ID
+// AUTO-GENERATED FILE - Do not edit manually
+// Generated from environment variables at build time
 
 export const environment = {
   firebase: {
-    apiKey: '',
-    projectId: '',
-    authDomain: '',
-    storageBucket: '',
-    messagingSenderId: '',
-    appId: ''
+    apiKey: 'PLACEHOLDER_API_KEY',
+    projectId: 'PLACEHOLDER_PROJECT_ID',
+    authDomain: 'PLACEHOLDER_AUTH_DOMAIN',
+    storageBucket: 'PLACEHOLDER_STORAGE_BUCKET',
+    messagingSenderId: 'PLACEHOLDER_SENDER_ID',
+    appId: 'PLACEHOLDER_APP_ID'
   }
 };
-
-
-
