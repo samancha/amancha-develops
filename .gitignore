@@ -1,14 +1,14 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# Environment variables and configuration
+# Environment variables
 .env
 .env.local
 .env.*.local
 
-# Angular environment files with real credentials (never commit actual values)
+# Generated environment file (created at build time from env vars)
+# Keep template file but not the generated one
 src/environments/environment.ts
-src/environments/environment.prod.ts
-# Allow example files to be committed (use as template)
+# Allow examples to be committed
 !src/environments/environment.example.ts
 
 # Compiled output
