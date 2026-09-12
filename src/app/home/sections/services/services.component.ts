@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { bookingUrl } from '../../../shared/config/site.config';
 
-interface ServiceCard {
+interface AuditStep {
   title: string;
-  icon: string;
-  color: string;
-  borderColor: string;
+  cardClass: string;
+  numberClass: string;
+  chevronClass: string;
   items: string[];
 }
 
@@ -17,41 +18,56 @@ interface ServiceCard {
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-  services: ServiceCard[] = [
+  readonly bookingUrl = bookingUrl;
+  readonly auditSteps: AuditStep[] = [
     {
-      title: 'AI Integration',
-      icon: 'fas fa-brain',
-      color: 'bg-blue-600',
-      borderColor: 'border-blue-100',
+      title: 'I watch how the work really happens',
+      cardClass: 'bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-blue-100',
+      numberClass: 'bg-blue-600',
+      chevronClass: 'text-blue-600',
       items: [
-        'Document processing & data extraction',
-        'Generative AI content systems',
-        'ML pipeline design & deployment',
-        'AI vendor evaluation & integration'
+        'Half a day in your office',
+        'Short conversations with your dispatcher, office manager, lead tech, and bookkeeper'
       ]
     },
     {
-      title: 'Cloud Transformation',
-      icon: 'fas fa-cloud',
-      color: 'bg-indigo-600',
-      borderColor: 'border-indigo-100',
+      title: 'You get a one-page map of where the hours go',
+      cardClass: 'bg-gradient-to-br from-indigo-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-indigo-100',
+      numberClass: 'bg-indigo-600',
+      chevronClass: 'text-indigo-600',
       items: [
-        'AWS & Azure architecture design',
-        'Multi-cloud migration strategy',
-        'Infrastructure as Code (IaC)',
-        'Cost optimization & monitoring'
+        'By person and by process',
+        'Most owners find at least one thing on it that surprises them'
       ]
     },
     {
-      title: 'Proof of Concepts',
-      icon: 'fas fa-clipboard-check',
-      color: 'bg-purple-600',
-      borderColor: 'border-purple-100',
+      title: 'The five fastest fixes, ranked',
+      cardClass: 'bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-purple-100',
+      numberClass: 'bg-purple-600',
+      chevronClass: 'text-purple-600',
       items: [
-        'Technical feasibility assessments',
-        'Rapid prototype development',
-        'Cloud architecture audits',
-        'Technology stack recommendations'
+        'Hours saved per month',
+        'Build time, risk, and payback'
+      ]
+    },
+    {
+      title: 'I build one of them and hand it over working',
+      cardClass: 'bg-gradient-to-br from-green-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-green-100',
+      numberClass: 'bg-green-600',
+      chevronClass: 'text-green-600',
+      items: [
+        'Not a recommendation',
+        'A working thing your team uses the week after I leave'
+      ]
+    },
+    {
+      title: 'A 90-day plan for the rest',
+      cardClass: 'bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-orange-100',
+      numberClass: 'bg-orange-600',
+      chevronClass: 'text-orange-600',
+      items: [
+        'Do the next ones with me, with someone else, or in-house',
+        'Keep the savings compounding'
       ]
     }
   ];

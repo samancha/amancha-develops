@@ -5,7 +5,7 @@
       <div>
         <h3 class="text-white text-xl font-bold mb-4">Amancha Consulting</h3>
         <p class="text-gray-400">
-          Cloud transformation, AI integration, and technical mentorship for modern organizations.
+          Time Audits that help Arizona home-services companies get office hours back.
         </p>
       </div>
 
@@ -13,10 +13,11 @@
       <div>
         <h4 class="text-white font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2">
-          <li><a href="#services" class="hover:text-white transition">Consulting Services</a></li>
-          <li><a href="#mentorship" class="hover:text-white transition">Developer Programs</a></li>
-          <li><a href="#expertise" class="hover:text-white transition">Expertise</a></li>
-          <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          <li><a routerLink="/" fragment="audit" class="hover:text-white transition">Time Audit</a></li>
+          <li><a routerLink="/mentorship" class="hover:text-white transition">Technical mentorship</a></li>
+          <li><a routerLink="/" fragment="about" class="hover:text-white transition">About Steve</a></li>
+          <li><a routerLink="/" fragment="contact" class="hover:text-white transition">Contact</a></li>
+          <li><a routerLink="/privacy" class="hover:text-white transition">Privacy</a></li>
         </ul>
       </div>
 
@@ -44,7 +45,8 @@
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <p class="text-sm text-gray-400">Tempe, Arizona</p>
+        <p class="text-sm text-gray-400">Phoenix, Arizona</p>
+        <p class="text-sm text-gray-400 mt-2"><a *ngIf="phoneHref; else phoneUnavailable" [href]="phoneHref" class="hover:text-white transition">{{ phoneLabel }}</a><ng-template #phoneUnavailable>{{ phoneLabel }}</ng-template></p>
       </div>
     </div>
 

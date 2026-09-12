@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { bookingUrl } from '../../../shared/config/site.config';
 
 @Component({
   selector: 'app-hero',
@@ -9,22 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
+  readonly bookingUrl = bookingUrl;
+
   achievements = [
     {
       icon: 'fas fa-check-circle',
-      text: '$5M+ in cost savings delivered'
+      text: '10+ years building automation'
     },
     {
       icon: 'fas fa-check-circle',
-      text: '50+ enterprise apps migrated'
+      text: 'Fortune 100 experience'
     },
     {
       icon: 'fas fa-check-circle',
-      text: '15+ engineers mentored'
-    },
-    {
-      icon: 'fas fa-check-circle',
-      text: 'AWS & Azure certified expertise'
+      text: 'Two-week engagements'
     }
   ];
 }

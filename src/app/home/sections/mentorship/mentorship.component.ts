@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface MentorshipProgram {
   id: string;
@@ -19,7 +20,7 @@ interface Workshop {
 @Component({
   selector: 'app-mentorship',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './mentorship.component.html',
   styleUrls: ['./mentorship.component.css']
 })
