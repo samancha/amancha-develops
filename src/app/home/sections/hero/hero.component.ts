@@ -23,7 +23,7 @@ export class HeroComponent {
     },
     {
       icon: 'fas fa-check-circle',
-      text: 'Two-week engagements'
+      text: 'Built around your priorities'
     }
   ];
 }

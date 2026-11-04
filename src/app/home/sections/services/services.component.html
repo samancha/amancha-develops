@@ -4,7 +4,7 @@
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-900 mb-4">The Time Audit</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Two weeks. Fixed price. You end it with something working, not a slide deck.
+        A focused, tailored engagement that ends with a useful decision and something working—not a slide deck.
       </p>
     </div>
 
@@ -30,10 +30,18 @@
       </div>
     </div>
     <div class="mt-12 max-w-3xl mx-auto bg-blue-50 border border-blue-100 p-8 rounded-xl text-center text-lg text-gray-800">
-      <p><strong>$4,500, fixed.</strong> The first three companies pay $2,000 in exchange for letting me use their results as a case study.</p>
-      <p class="mt-4"><strong>If I don't find at least 20 recoverable hours a month, the audit is free.</strong></p>
-      <p class="mt-4">It costs you about three hours of your team's time. I do the rest.</p>
-      <a *ngIf="bookingUrl; else bookingUnavailable" [href]="bookingUrl" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Book a 20-minute call</a>
+      <p *ngIf="engagementStartsAt"><strong>Engagements start at ${{ engagementStartsAt }}.</strong> Final scope and pricing are agreed together.</p>
+      <p *ngIf="!engagementStartsAt">Scope and pricing are shaped around the project and agreed together before work begins.</p>
+      <div class="mt-6 text-left bg-white border border-green-200 p-5 rounded-lg">
+        <p><strong>One-year warranty</strong></p>
+        <p class="mt-2">Delivered work is covered for one year. If it breaks while doing what it was built to do, I will fix it at no charge.</p>
+        <p class="mt-2 text-sm text-gray-600">The warranty does not cover changed requirements, changes to third-party services the work depends on, or modifications made by someone else.</p>
+      </div>
+      <div class="mt-4 text-left bg-white border border-blue-200 p-5 rounded-lg">
+        <p><strong>Support and changes</strong></p>
+        <p class="mt-2">New requirements, enhancements, and ongoing operation are separate paid engagements.</p>
+      </div>
+      <a *ngIf="bookingUrl; else bookingUnavailable" [href]="bookingUrl" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Book a conversation</a>
       <ng-template #bookingUnavailable><a href="#contact" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Ask about a Time Audit</a></ng-template>
     </div>
   </div>

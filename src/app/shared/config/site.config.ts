@@ -4,6 +4,7 @@
  */
 export const siteConfig = {
   bookingUrl: '',
+  engagementStartsAt: '',
   publicPhoneNumber: '630-744-9852'
 } as const;
 
@@ -21,3 +22,4 @@ export function toTelHref(phoneNumber: string): string | null {
 }
 
 export const bookingUrl = isValidBookingUrl(siteConfig.bookingUrl) ? siteConfig.bookingUrl : null;
+export const engagementStartsAt = siteConfig.engagementStartsAt.trim() ? siteConfig.engagementStartsAt : null;

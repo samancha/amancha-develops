@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { bookingUrl } from '../../../shared/config/site.config';
+import { bookingUrl, engagementStartsAt } from '../../../shared/config/site.config';
 
 interface AuditStep {
   title: string;
@@ -19,6 +19,7 @@ interface AuditStep {
 })
 export class ServicesComponent {
   readonly bookingUrl = bookingUrl;
+  readonly engagementStartsAt = engagementStartsAt;
   readonly auditSteps: AuditStep[] = [
     {
       title: 'I watch how the work really happens',
@@ -26,18 +27,18 @@ export class ServicesComponent {
       numberClass: 'bg-blue-600',
       chevronClass: 'text-blue-600',
       items: [
-        'Half a day in your office',
-        'Short conversations with your dispatcher, office manager, lead tech, and bookkeeper'
+        'Time with the people closest to the work',
+        'A shared view of the goals, constraints, and opportunities'
       ]
     },
     {
-      title: 'You get a one-page map of where the hours go',
+      title: 'You get a clear map of what is happening',
       cardClass: 'bg-gradient-to-br from-indigo-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-indigo-100',
       numberClass: 'bg-indigo-600',
       chevronClass: 'text-indigo-600',
       items: [
-        'By person and by process',
-        'Most owners find at least one thing on it that surprises them'
+        'By workflow, system, and handoff',
+        'A practical view of what is helping and what is getting in the way'
       ]
     },
     {
@@ -46,8 +47,8 @@ export class ServicesComponent {
       numberClass: 'bg-purple-600',
       chevronClass: 'text-purple-600',
       items: [
-        'Hours saved per month',
-        'Build time, risk, and payback'
+        'Expected impact and effort',
+        'Risk, dependencies, and a sensible sequence'
       ]
     },
     {
@@ -57,17 +58,17 @@ export class ServicesComponent {
       chevronClass: 'text-green-600',
       items: [
         'Not a recommendation',
-        'A working thing your team uses the week after I leave'
+        'A working improvement your team can use and understand'
       ]
     },
     {
-      title: 'A 90-day plan for the rest',
+      title: 'A plan for what comes next',
       cardClass: 'bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition border-orange-100',
       numberClass: 'bg-orange-600',
       chevronClass: 'text-orange-600',
       items: [
-        'Do the next ones with me, with someone else, or in-house',
-        'Keep the savings compounding'
+        'Continue with me, someone else, or in-house',
+        'Keep the next improvements moving'
       ]
     }
   ];
