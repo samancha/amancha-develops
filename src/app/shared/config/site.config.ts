@@ -1,10 +1,10 @@
 /**
- * Public launch settings. Replace both placeholders before publishing the
- * Time Audit campaign; keeping them here prevents CTAs from drifting apart.
+ * Public launch settings. Replace the remaining placeholder before publishing
+ * the Time Audit campaign; keeping them here prevents CTAs from drifting apart.
  */
 export const siteConfig = {
   bookingUrl: '',
-  publicPhoneNumber: ''
+  publicPhoneNumber: '630-744-9852'
 } as const;
 
 export function isValidBookingUrl(url: string): boolean {
