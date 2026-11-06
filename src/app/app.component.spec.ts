@@ -14,16 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'amancha_develops' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('amancha_develops');
-  });
-
-  it('should render title', () => {
+  it('renders the application router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, amancha_develops');
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 });

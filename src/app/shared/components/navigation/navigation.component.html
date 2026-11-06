@@ -1,17 +1,18 @@
 <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-      <div class="flex-shrink-0">
+      <a routerLink="/" class="flex-shrink-0">
         <span class="text-2xl font-bold text-blue-600">Amancha Consulting</span>
-      </div>
+      </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
-        <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
-        <a href="#expertise" class="text-gray-700 hover:text-blue-600 transition">Expertise</a>
-        <a href="#mentorship" class="text-gray-700 hover:text-blue-600 transition">Developer Acceleration</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
-        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+        <a routerLink="/" fragment="audit" class="text-gray-700 hover:text-blue-600 transition">Time Audit</a>
+        <a routerLink="/" fragment="problem" class="text-gray-700 hover:text-blue-600 transition">How it works</a>
+        <a routerLink="/" fragment="about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+        <a *ngIf="phoneHref; else phoneUnavailable" [href]="phoneHref" class="text-gray-700 hover:text-blue-600 transition">{{ phoneLabel }}</a>
+        <ng-template #phoneUnavailable><span class="text-gray-500">{{ phoneLabel }}</span></ng-template>
+        <a routerLink="/" fragment="contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Get started</a>
       </div>
 
       <!-- Mobile menu button -->
@@ -32,23 +33,28 @@
     class="md:hidden bg-white border-t">
     <div class="px-4 pt-2 pb-3 space-y-1">
       <a 
-        href="#services" 
+        routerLink="/"
+        fragment="audit"
         (click)="closeMobileMenu()"
-        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Services</a>
+          class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Time Audit</a>
       <a 
-        href="#expertise" 
+        routerLink="/"
+        fragment="problem"
         (click)="closeMobileMenu()"
-        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Expertise</a>
+          class="block px-3 py-2 text-gray-700 hover:bg-gray-50">How it works</a>
       <a 
-        href="#mentorship" 
-        (click)="closeMobileMenu()"
-        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">Developer Acceleration</a>
-      <a 
-        href="#about" 
+        routerLink="/"
+        fragment="about"
         (click)="closeMobileMenu()"
         class="block px-3 py-2 text-gray-700 hover:bg-gray-50">About</a>
+      <a
+        *ngIf="phoneHref"
+        [href]="phoneHref"
+        (click)="closeMobileMenu()"
+        class="block px-3 py-2 text-gray-700 hover:bg-gray-50">{{ phoneLabel }}</a>
       <a 
-        href="#contact" 
+        routerLink="/"
+        fragment="contact"
         (click)="closeMobileMenu()"
         class="block px-3 py-2 text-blue-600 font-semibold">Get Started</a>
     </div>
