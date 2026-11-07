@@ -6,7 +6,7 @@
       <p class="text-xl text-blue-100">
         <a *ngIf="phoneHref; else phoneUnavailable" [href]="phoneHref" class="font-semibold underline hover:text-white">Call or text me: {{ phoneLabel }}</a>
         <ng-template #phoneUnavailable>Call or text me: {{ phoneLabel }}</ng-template>
-        <span *ngIf="bookingUrl"> — or <a [href]="bookingUrl" class="font-semibold underline hover:text-white">book a conversation directly</a>.</span>
+        <span *ngIf="bookingUrl"> — or <a [href]="bookingUrl" class="font-semibold underline hover:text-white">book a free 45-minute consultation directly</a>.</span>
       </p>
     </div>
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { bookingUrl, engagementStartsAt } from '../../../shared/config/site.config';
+import { bookingUrl } from '../../../shared/config/site.config';
 
 interface AuditStep {
   title: string;
@@ -19,7 +19,6 @@ interface AuditStep {
 })
 export class ServicesComponent {
   readonly bookingUrl = bookingUrl;
-  readonly engagementStartsAt = engagementStartsAt;
   readonly auditSteps: AuditStep[] = [
     {
       title: 'I watch how the work really happens',

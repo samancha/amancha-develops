@@ -1,4 +1,4 @@
-import { engagementStartsAt, isValidBookingUrl, toTelHref } from './site.config';
+import { isValidBookingUrl, toTelHref } from './site.config';
 
 describe('site launch configuration', () => {
   it('accepts only HTTPS booking URLs', () => {
@@ -10,9 +10,5 @@ describe('site launch configuration', () => {
   it('normalizes a public phone number into a tel link', () => {
     expect(toTelHref('(630) 744-9852')).toBe('tel:6307449852');
     expect(toTelHref('')).toBeNull();
-  });
-
-  it('does not expose an empty engagement price anchor', () => {
-    expect(engagementStartsAt).toBeNull();
   });
 });

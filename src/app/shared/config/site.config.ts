@@ -1,10 +1,9 @@
 /**
  * Public launch settings. Replace the remaining placeholder before publishing
- * the Time Audit campaign; keeping them here prevents CTAs from drifting apart.
+ * the consulting site; keeping them here prevents CTAs from drifting apart.
  */
 export const siteConfig = {
   bookingUrl: '',
-  engagementStartsAt: '',
   publicPhoneNumber: '630-744-9852'
 } as const;
 
@@ -22,4 +21,3 @@ export function toTelHref(phoneNumber: string): string | null {
 }
 
 export const bookingUrl = isValidBookingUrl(siteConfig.bookingUrl) ? siteConfig.bookingUrl : null;
-export const engagementStartsAt = siteConfig.engagementStartsAt.trim() ? siteConfig.engagementStartsAt : null;

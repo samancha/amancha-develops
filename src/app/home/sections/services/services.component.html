@@ -30,19 +30,18 @@
       </div>
     </div>
     <div class="mt-12 max-w-3xl mx-auto bg-blue-50 border border-blue-100 p-8 rounded-xl text-center text-lg text-gray-800">
-      <p *ngIf="engagementStartsAt"><strong>Engagements start at ${{ engagementStartsAt }}.</strong> Final scope and pricing are agreed together.</p>
-      <p *ngIf="!engagementStartsAt">Scope and pricing are shaped around the project and agreed together before work begins.</p>
+      <p>A free 45-minute consultation helps me understand the problem or process you want to improve. I’ll provide a quote afterward, once the scope is clear.</p>
       <div class="mt-6 text-left bg-white border border-green-200 p-5 rounded-lg">
-        <p><strong>One-year warranty</strong></p>
-        <p class="mt-2">Delivered work is covered for one year. If it breaks while doing what it was built to do, I will fix it at no charge.</p>
-        <p class="mt-2 text-sm text-gray-600">The warranty does not cover changed requirements, changes to third-party services the work depends on, or modifications made by someone else.</p>
+        <p><strong>90-day warranty</strong></p>
+        <p class="mt-2">Delivered work is covered for 90 days. If it breaks while doing what it was built to do, I will fix it at no charge.</p>
+        <p class="mt-2 text-sm text-gray-600">The warranty does not cover changed requirements, changes to third-party services the work depends on, modifications made by someone else, or feature enhancements beyond the agreed scope.</p>
       </div>
       <div class="mt-4 text-left bg-white border border-blue-200 p-5 rounded-lg">
         <p><strong>Support and changes</strong></p>
-        <p class="mt-2">New requirements, enhancements, and ongoing operation are separate paid engagements.</p>
+        <p class="mt-2">New requirements, feature enhancements, and ongoing operation are separate paid engagements.</p>
       </div>
-      <a *ngIf="bookingUrl; else bookingUnavailable" [href]="bookingUrl" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Book a conversation</a>
-      <ng-template #bookingUnavailable><a href="#contact" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Ask about a Time Audit</a></ng-template>
+      <a *ngIf="bookingUrl; else bookingUnavailable" [href]="bookingUrl" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Book a free 45-minute consultation</a>
+      <ng-template #bookingUnavailable><a href="#contact" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Ask about a free 45-minute consultation</a></ng-template>
     </div>
   </div>
 </section>
